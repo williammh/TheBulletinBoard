@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title></title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+    <body>
+        <p>@ViewBag.Message</p>
+        <p>@ViewBag.Name</p>
+        <h1>Login</h1>
+        <div class="left">
+            <p>E-Mail: </p>
+            <p>Password: </p>
+        </div>
+        <div class="right">
+            <form action="login" method="post">
+                <p><input type="text" name="Email"></p>
+                <p><input type="password" name="Password"></p>
+                <p><input type="submit" value="Login"></p>
+            </form>
+        </div>
+        <h1>Register</h1>
+        <div class="left">
+            <p>First Name: </p>
+            <p>Last Name: </p>
+            <p>E-Mail: </p>
+            <p>Password: </p>
+            <p>Confirm Password: </P>
+        </div>
+        <div class="right">
+            <form action="register" method="post">
+                <p><input type="text" name="FirstName"></p>
+                <p><input type="text" name="LastName"></p>
+                <p><input type="text" name="Email"></p>
+                <p><input type="password" name="Password"></p>
+                <p><input type="password" name="PasswordAgain"></p>
+                <p><input type="submit"></p>
+            </form>
+        </div>
+    </body>
+</html>

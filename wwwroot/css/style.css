@@ -1,0 +1,56 @@
+/*Write all of your CSS here*/
+h1{
+    color: blue;
+}
+button {
+    padding: 4px 8px;
+    box-shadow: 3px 3px black;
+    border: 1px solid orange;
+}
+button:active {
+    box-shadow: 1px 1px black;
+    transform: translateY(2px);
+}
+*:focus {
+    outline: none;
+}
+input.quote {
+    border: 3px solid black;
+    padding: 3px;
+    width: 240px;
+}
+textarea.quote {
+    border: 3px solid black;
+    resize: none;
+    width: 240px;
+}
+
+/*my css*/
+.left{
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+}
+.left p{
+    margin-bottom: 16px;
+    /*vertical-align: top;*/
+
+}
+.right{
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+}
+.right p{
+    /*margin-top: 5px;*/
+
+}
+.right select{
+    display: block;
+}
+.right input{
+    display: block;
+}
+.right textarea{
+    display: block;
+}

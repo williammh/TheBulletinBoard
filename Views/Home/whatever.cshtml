@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title></title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+    <body>
+        <h3>Welcome to Quoting Dojo</h3>
+        <form action="quotes" method="post">
+            <table>
+                <tr>
+                    <td>Your Quote: </td>
+                    <td><textarea class="quote" name="Text"></textarea></td>
+                </tr>
+            </table>
+            <button class="quote" type="submit">Add my Quote</button>
+            <a href="/quotes"><button class="skip" type="button">Skip to quotes!</button></a>
+        </form>
+
+        <h1>Quotes</h1>
+        @model IEnumerable<quotingDojo.Models.Quote>
+        @{
+            foreach(var Current in Model)
+            {
+                <p>@Current.Text  <br>- @Current.Username</p>
+            }
+        }
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Login</title>
+        <link rel="stylesheet" href="~/css/quotes.css"/>
+    </head>
+    <body>
+        <h1>The Bulletin Board</h1>
+        <p>Logged in successfully as @ViewBag.firstname @ViewBag.lastname</p>
+        <form action="postquote" method="post">
+            <textarea name="Text"></textarea><br>
+            <input type="submit" value="Say Something!"></input>
+        </form>
+        @{
+            foreach(var current in ViewBag.allQuotes)
+            {
+                @:<div class="quote">
+                    <p>At @current.created_at @current.user.FirstName said:</p>
+                    <br>
+                    <p class="text">@current.Text</p>
+                    <br>
+                    <p>Post ID: @current.ID</p>
+                    if(@current.user.FirstName == @ViewBag.firstname)
+                    {
+                        <button>Delete</button>
+                    }
+                @:</div>
+            }
+        }
+    </body>
+</html>
