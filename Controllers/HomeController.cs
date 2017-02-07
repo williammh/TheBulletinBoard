@@ -84,13 +84,14 @@ namespace quotingDojo.Controllers
                 Console.WriteLine(id);
                 quoteFactory.Add(NewQuote, id);
             }
-            ViewBag.Name = SessionExtensions.GetObjectFromJson<User>(HttpContext.Session, "User").FirstName;
+            ViewBag.firstname = SessionExtensions.GetObjectFromJson<User>(HttpContext.Session, "User").FirstName;
+            ViewBag.lastname = SessionExtensions.GetObjectFromJson<User>(HttpContext.Session, "User").LastName;
             ViewBag.allQuotes = quoteFactory.FindAll();
-            foreach(var entry in ViewBag.allQuotes)
-            {
-                Console.WriteLine(entry.Text);
-            }
-            return RedirectToAction("Login");
+            // foreach(var entry in ViewBag.allQuotes)
+            // {
+            //     Console.WriteLine(entry.Text);
+            // }
+            return View("Login");
         }
     }
 }

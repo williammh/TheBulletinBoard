@@ -8,20 +8,49 @@ body{
 h1{
     color: #55aaff;
     text-align: center;
+    font-size: 36px;
 }
-.quote{
+.quotedetails{
     border: 1px solid #55aaff;
-    background-color: #333333;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    background-image: linear-gradient(to bottom, #bbbbff, #55aaff);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /*margin-top: 5px;*/
+    margin-bottom: -18px;
     margin-left: 25%;
     margin-right: 25%;
     padding: 10px;
     text-align: center;
-    width: 50%;
+    /*width: 50%;*/
+    /*opacity: 0.5;*/
 }
-.text{
-    font-size: 14px;
-    font-weight: bold;
+.quote{
+    /*border: 1px solid #55aaff;*/
+    background-color: #333333;
+    /*border-radius: 10px;*/
+    margin-top: 0px;
+    margin-bottom: -18px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 50%;
+    font-size: 24px;
+    /*opacity: 0.5;*/
+}
+.quotebottom{
+    background-color: #333333;
+    margin-top: 0px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /*opacity: 0.5;*/
+}
+.selected{
+    /*font-size: 24px;*/
+    transform: scale(1.25, 1.25);
 }
