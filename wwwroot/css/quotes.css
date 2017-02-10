@@ -24,7 +24,7 @@ h1{
     /*width: 50%;*/
     /*opacity: 0.5;*/
 }
-.quote{
+.quotetext{
     /*border: 1px solid #55aaff;*/
     background-color: #333333;
     /*border-radius: 10px;*/
@@ -37,18 +37,35 @@ h1{
     text-align: center;
     width: 50%;
     font-size: 24px;
-    /*opacity: 0.5;*/
+
+}
+.quoteid{
+    background-color: #333333;;
+    margin-top: 0px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.quotedelete{
+    background-color: #333333;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 20px;
+    /*padding-bottom: 20px;*/
 }
 .quotebottom{
     background-color: #333333;
     margin-top: 0px;
     margin-left: 25%;
     margin-right: 25%;
-    padding-top: 20px;
+    /*padding-top: 20px;*/
     padding-bottom: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    /*opacity: 0.5;*/
 }
 .selected{
     /*font-size: 24px;*/

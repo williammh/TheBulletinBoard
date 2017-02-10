@@ -29,18 +29,22 @@
         @{
             foreach(var current in ViewBag.allQuotes)
             {
+                <!--int x = @current.ID;-->
                 @:<div class="wholequote">
                     <p class="quotedetails">At @current.created_at @current.user.FirstName said:</p>
                     <br>
-                    <p class="quote">@current.Text</p>
+                    <p class="quotetext">@current.Text</p>
                     <br>
-                    @:<p class="quotebottom">Post ID: @current.ID
+                    <p class="quotedelete">Post ID: @current.ID</p>
                     if(@current.user.FirstName == @ViewBag.firstname)
                     {
-                        <br>
-                        <button>Delete</button>
+                        @:<form action="deletequote" method="post" class="quotedelete">
+                            <input type="hidden" name="toDelete" value="@current.ID"></input>
+                            <input type="submit" value="Delete"></input>
+                        @:</form>
                     }
-                    @:</p>
+                    <div class="quotebottom">
+                    </div>
                 @:</div>
             }
         }

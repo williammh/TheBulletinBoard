@@ -31,6 +31,14 @@ namespace quotingDojo.Factory
                 dbConnection.Execute(query);
             }
         }
+        public void Delete(int toDelete)
+        {
+            using (IDbConnection dbConnection = Connection) {
+                string query = string.Format("DELETE FROM quotes WHERE id = {0}", toDelete);
+                dbConnection.Open();
+                dbConnection.Execute(query);
+            }
+        }
         public IEnumerable<Quote> FindAll()
         {
             using (IDbConnection dbConnection = Connection)
