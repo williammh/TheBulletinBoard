@@ -7,14 +7,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
-                $(".wholequote").css("opacity", "0.5")
-                $(".wholequote").mouseenter(function(){
+                $(".quote").css("opacity", "0.75")
+                $(".quote").mouseenter(function(){
                     $(this).addClass("selected");
                     $(this).css("opacity", "1")
                 });
-                $(".wholequote").mouseleave(function(){
+                $(".quote").mouseleave(function(){
                     $(this).removeClass("selected");
-                    $(this).css("opacity", "0.5")
+                    $(this).css("opacity", "0.75")
                 })
             });
         </script>
@@ -26,19 +26,19 @@
             <textarea name="Text"></textarea><br>
             <input type="submit" value="Say Something!"></input>
         </form>
+        <a href="logout"><button>Logout</button></a>
         @{
             foreach(var current in ViewBag.allQuotes)
             {
-                <!--int x = @current.ID;-->
-                @:<div class="wholequote">
-                    <p class="quotedetails">At @current.created_at @current.user.FirstName said:</p>
+                @:<div class="quote">
+                    <p class="quoteheader">At @current.created_at @current.user.FirstName said:</p>
                     <br>
                     <p class="quotetext">@current.Text</p>
                     <br>
-                    <p class="quotedelete">Post ID: @current.ID</p>
+                    <p class="quoteother">Post ID: @current.ID</p>
                     if(@current.user.FirstName == @ViewBag.firstname)
                     {
-                        @:<form action="deletequote" method="post" class="quotedelete">
+                        @:<form action="deletequote" method="post" class="quoteother">
                             <input type="hidden" name="toDelete" value="@current.ID"></input>
                             <input type="submit" value="Delete"></input>
                         @:</form>

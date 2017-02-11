@@ -10,7 +10,7 @@ h1{
     text-align: center;
     font-size: 36px;
 }
-.quotedetails{
+.quoteheader{
     border: 1px solid #55aaff;
     background-image: linear-gradient(to bottom, #bbbbff, #55aaff);
     border-top-left-radius: 10px;
@@ -39,16 +39,7 @@ h1{
     font-size: 24px;
 
 }
-.quoteid{
-    background-color: #333333;;
-    margin-top: 0px;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-bottom: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.quotedelete{
+.quoteother{
     background-color: #333333;
     margin-top: 0px;
     margin-bottom: 0px;

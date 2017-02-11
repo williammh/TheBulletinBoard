@@ -34,7 +34,8 @@ namespace quotingDojo.Controllers
         [HttpGet]
         [Route("/")]
         public IActionResult Index(string Message)
-        {   ViewBag.Message = Message;
+        {   
+            ViewBag.Message = Message;
             return View("index");
         }
         [HttpPost]
@@ -87,22 +88,24 @@ namespace quotingDojo.Controllers
             ViewBag.firstname = SessionExtensions.GetObjectFromJson<User>(HttpContext.Session, "User").FirstName;
             ViewBag.lastname = SessionExtensions.GetObjectFromJson<User>(HttpContext.Session, "User").LastName;
             ViewBag.allQuotes = quoteFactory.FindAll();
-            // foreach(var entry in ViewBag.allQuotes)
-            // {
-            //     Console.WriteLine(entry.Text);
-            // }
             return View("Login");
         }
         [HttpPost]
         [Route("deletequote")]
         public IActionResult DeleteQuote(int toDelete)
         {
-            Console.WriteLine(toDelete);
             quoteFactory.Delete(toDelete);
             ViewBag.firstname = SessionExtensions.GetObjectFromJson<User>(HttpContext.Session, "User").FirstName;
             ViewBag.lastname = SessionExtensions.GetObjectFromJson<User>(HttpContext.Session, "User").LastName;
             ViewBag.allQuotes = quoteFactory.FindAll();
             return View("Login");
+        }
+        [HttpGet]
+        [Route("logout")]
+        public IActionResult logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", new {Message = "Log out successful!"});
         }
     }
 }
